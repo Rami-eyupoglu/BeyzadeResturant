@@ -1,0 +1,123 @@
+/* Reset default padding and margin */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'cursive', cursive;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background: #f5f4f4;
+    padding: 16px;
+    margin: 25px;
+}
+
+header nav ul li {
+    margin: 0 25px;
+}
+
+header nav ul li a {
+    color: #170c0c;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    transition: color 1s ease-out;
+}
+
+header nav ul li a:hover {
+    color: #8254ff;
+}
+
+.food-card {
+    width: 250px; /* Set a specific width for the card */
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25% 10%;
+    box-shadow: 12px 12px 2px 1px rgba(191, 191, 217, 0.2);
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for transform and box-shadow */
+}
+
+.food-card:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 15px 15px 5px 2px rgba(191, 191, 217, 0.3); /* Increase the shadow */
+}
+
+.food-cards-container {
+    display: flex; /* This will align the cards in a row */
+    justify-content: center; /* Center the cards horizontally */
+    flex-wrap: wrap; /* Allows wrapping of cards if the screen is too small */
+}
+
+
+.food-image {
+    width: 100%;
+    display: block; /* Removes bottom space under the image */
+}
+
+.food-description {
+    padding: 15px;
+    text-align: center;
+}
+
+.food-description h3 {
+    margin: 1px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Ensure the sections are centered and have some spacing */
+section {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+    margin-bottom: 1px;
+}
+
+
+footer {
+    font-size: 14px;
+    background-color: #f1f1f1;
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 4mm ridge rgba(211, 220, 50, .6);
+}
+
+footer a:hover {
+    border-bottom: 1px solid rgba(211, 220, 50, .6);
+}
