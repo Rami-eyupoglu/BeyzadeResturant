@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('1111.jpg');
+            background-size: cover; /* This will cover the entire viewport */
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            height: 400px;
+            width: 400px;
+            background-color: rgb(228, 212, 212);
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 12px 12px 2px 1px #0000ff33;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px; /* space between buttons and label */
+        }
+
+        .button {
+            width: 150px;
+            height: 40px;
+            border: 3px solid #315cfd;
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            background: white;
+            font-size: 1em;
+            font-weight: 500;
+            margin: 0 10px; /* space between buttons */
+        }
+
+        .button:hover {
+            background: #315cfd;
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #14569c;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="header">
+            <button class="button" id="sign-in-button">Sign in</button>
+            <button class="button" id="sign-up-button">Sign Up</button>
+        </div>
+        <form id="login-form" action="/submit-your-login-form" method="post">
+            <div class="form-group">
+                <label for="username">Kullanıcı Adı</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Giriş Yap">
+            </div>
+            <div>
+                <label>Şifremi Unuttum!!</label>
+            </div>
+        </form>
+    </div>
+</body>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if(username === 'admin' && password === '123') {
+                // Redirect to index.html if credentials are correct
+                window.location.href = 'index.html';
+            } else {
+                // Display an error message or handle incorrect credentials
+                alert('Invalid username or password');
+            }
+        });
+    </script>
+</html>
